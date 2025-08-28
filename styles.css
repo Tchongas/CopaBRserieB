@@ -1,0 +1,324 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    font-family: 'Minecraft', 'Minecraftia', '04b03', monospace;
+    /* Subtle, grounded black outline */
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    color: white;
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+.match-info {
+    position: fixed;
+    top: 28px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1280px;
+}
+.team {
+    font-size: 46px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 400px;
+}
+.home-team {
+    text-align: right;
+}
+.away-team {
+    text-align: left;
+}
+
+
+
+.pbs-info {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    gap: 18px;
+    /* White outline for black text */
+    text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+
+}
+.pb-time1 {
+    font-size: 36px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 304px;
+}
+.pb-time2 {
+    font-size: 36px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 304px;
+}
+.pb-title {
+    position: fixed;
+    top: 24px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    gap: 16px;
+    /* White outline for black text */
+    text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+}
+.pb-title1 {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 304px;
+}
+.pb-title2 {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 304px;
+}
+
+
+.comentary-title {
+    position: fixed;
+    bottom: 410px;
+    left: 0;
+    right: 990px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    /* Inherit default black outline from body */
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+.comentary {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 266px;
+}
+.comentary1 {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 266px;
+}
+.comentary2 {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 266px;
+}
+.comentary-casters {
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    right: 947px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    gap: 187px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+
+.player-head {
+    position: fixed;
+    top: 18px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1716px;
+}
+.player-head1 {
+    width: 62px;
+    height: 62px;
+}
+.player-head2 {
+    width: 62px;
+    height: 62px;
+}
+
+
+
+.player-info-name {
+    position: fixed;
+    bottom: 356px;
+    left: 560px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    gap: 200px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+.player-info1 {
+    font-size: 38px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+}
+.player-infoX {
+    position: fixed;
+    font-size: 38px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+}
+.player-info2 {
+    font-size: 38px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+}
+
+
+
+.player-info-elo {
+    position: fixed;
+    bottom: 290px;
+    left: 560px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    gap: 40px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+.player-info1-elo {
+    font-size: 28px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+}
+.player-info2-elo {
+    font-size: 34px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+    text-shadow: 1px 1px 0 #ff242428, -1px 1px 0 #ff242428, 1px -1px 0 #ff242428, -1px -1px 0 #ff242428;
+
+}
+
+
+
+
+.player-info-pb {
+    position: fixed;
+    bottom: 228px;
+    left: 560px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    gap: 40px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+.player-info1-pb {
+    font-size: 28px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+}
+.player-info2-pb {
+    font-size: 34px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+    text-shadow: 1px 1px 0 #ff242428, -1px 1px 0 #ff242428, 1px -1px 0 #ff242428, -1px -1px 0 #ff242428;
+}
+
+
+
+.match-commands {
+    position: fixed;
+    bottom: 10px;
+    left: 893px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    gap: 200px;
+    
+}
+.match-commands1 {
+    font-size: 22px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+.match-commands2 {
+    font-size: 22px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+.match-commands3 {
+    font-size: 22px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}   
+
+
+.match-Timer {
+    position: fixed;
+    bottom: 60px;
+    left: 567px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    gap: 200px;
+    
+}
+.match-Timer {
+    font-size: 96px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+

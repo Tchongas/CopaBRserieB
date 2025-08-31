@@ -19,7 +19,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-
+    background-image: url('./images/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -322,3 +322,36 @@ body, html {
     text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
 
+.match-points {
+    position: fixed;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    gap: 448px;
+}
+.match-points1 {
+    font-size: 44px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+.match-points2 {
+    font-size: 44px;
+    font-weight: 100;
+    text-align: center;
+    min-width: 133px;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.square {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    background-color: #ffffff;
+}

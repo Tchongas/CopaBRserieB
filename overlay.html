@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background"></div>
-    <div class="content">
+    <div class="background" id="background-match"></div>
+    <div class="content" id="match">
         <div class="match-info">
             <div class="team home-team">Carlitos</div>
             <div class="team away-team"><span></span>Floaddy</div>
@@ -55,9 +55,15 @@
             <div class="match-commands3">! runners</div>
         </div>
 
+        <div class="match-points">
+            <div class="match-points1"><span class="square" id="point1-1"></span><span class="square" id="point1-2"></span><span class="square" id="point1-3"></span></div>
+            <div class="match-points2"><span class="square" id="point2-1"></span><span class="square" id="point2-2"></span><span class="square" id="point2-3"></span></div>
+        </div>
+
         <div class="match-Timer">
             <div class="match-Timer">00:00</div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

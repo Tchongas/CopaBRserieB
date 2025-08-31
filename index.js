@@ -5,12 +5,19 @@ let player1IGN = '';
 let player2IGN = '';
 
 function updatePoints() {
-    document.getElementById('point1-1').style.visibility = points1 >= 1 ? 'visible' : 'hidden';
-    document.getElementById('point1-2').style.visibility = points1 >= 2 ? 'visible' : 'hidden';
-    document.getElementById('point1-3').style.visibility = points1 >= 3 ? 'visible' : 'hidden';
-    document.getElementById('point2-1').style.visibility = points2 >= 1 ? 'visible' : 'hidden';
-    document.getElementById('point2-2').style.visibility = points2 >= 2 ? 'visible' : 'hidden';
-    document.getElementById('point2-3').style.visibility = points2 >= 3 ? 'visible' : 'hidden';
+    const point1_1 = document.getElementById('point1-1');
+    const point1_2 = document.getElementById('point1-2');
+    const point1_3 = document.getElementById('point1-3');
+    const point2_1 = document.getElementById('point2-1');
+    const point2_2 = document.getElementById('point2-2');
+    const point2_3 = document.getElementById('point2-3');
+    
+    if (point1_1) point1_1.style.visibility = points1 >= 1 ? 'visible' : 'hidden';
+    if (point1_2) point1_2.style.visibility = points1 >= 2 ? 'visible' : 'hidden';
+    if (point1_3) point1_3.style.visibility = points1 >= 3 ? 'visible' : 'hidden';
+    if (point2_1) point2_1.style.visibility = points2 >= 1 ? 'visible' : 'hidden';
+    if (point2_2) point2_2.style.visibility = points2 >= 2 ? 'visible' : 'hidden';
+    if (point2_3) point2_3.style.visibility = points2 >= 3 ? 'visible' : 'hidden';
 }
 
 // URL-driven state presets: map state id -> configuration (visibility only for now)

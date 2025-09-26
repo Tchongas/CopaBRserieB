@@ -1,4 +1,10 @@
-@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+@font-face {
+    font-family: 'Minecraft';
+    src: url('./minecraft.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
 body, html {
     margin: 0;

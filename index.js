@@ -4,6 +4,45 @@ let points2 = 0;
 let player1IGN = '';
 let player2IGN = '';
 
+// Timer state
+let timerInterval = null;
+let elapsedSeconds = 0; // counts up
+
+function formatTime(totalSeconds) {
+    totalSeconds = Math.max(0, Math.floor(totalSeconds || 0));
+    const m = Math.floor(totalSeconds / 60);
+    const s = totalSeconds % 60;
+    const mm = String(m).padStart(2, '0');
+    const ss = String(s).padStart(2, '0');
+    return `${mm}:${ss}`;
+}
+
+function updateTimerDisplay() {
+    const timerEl = document.querySelector('.match-Timer .match-Timer');
+    if (timerEl) timerEl.textContent = formatTime(elapsedSeconds);
+}
+
+function clearTimerInterval() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
+
+function startTimer() {
+    clearTimerInterval();
+    timerInterval = setInterval(() => {
+        elapsedSeconds += 1;
+        updateTimerDisplay();
+    }, 1000);
+}
+
+function resetTimer() {
+    clearTimerInterval();
+    elapsedSeconds = 0;
+    updateTimerDisplay();
+}
+
 function updatePoints() {
     const point1_1 = document.getElementById('point1-1');
     const point1_2 = document.getElementById('point1-2');
@@ -76,6 +115,7 @@ function applyFromUrl() {
     const qPB1 = params.get('pb1');
     const qPB2 = params.get('pb2');
     const qTime = params.get('time');
+    const qTimer = params.get('timer'); // 1 starts timer, 0 resets to 00:00
     const qCmd1 = params.get('cmd1');
     const qCmd2 = params.get('cmd2');
     const qCmd3 = params.get('cmd3');
@@ -151,10 +191,30 @@ function applyFromUrl() {
         if (pb2El) pb2El.textContent = qPB2;
     }
 
-    // Apply timer if provided
+    // Apply timer/time if provided
     if (qTime !== null) {
-        const timerEl = document.querySelector('.match-Timer .match-Timer');
-        if (timerEl) timerEl.textContent = qTime;
+        // If a specific time is provided, set display and internal counter accordingly
+        const parts = (qTime || '').split(':');
+        if (parts.length >= 2) {
+            const mm = parseInt(parts[0], 10) || 0;
+            const ss = parseInt(parts[1], 10) || 0;
+            elapsedSeconds = Math.max(0, mm * 60 + ss);
+        } else {
+            elapsedSeconds = 0;
+        }
+        updateTimerDisplay();
+    }
+
+    if (qTimer !== null) {
+        // Normalize values like '1', 'true' to start; '0', 'false', 'reset' to stop/reset
+        const val = String(qTimer).toLowerCase();
+        const shouldStart = (val === '1' || val === 'true' || val === 'start');
+        const shouldReset = (val === '0' || val === 'false' || val === 'reset' || val === 'stop');
+        if (shouldStart) {
+            startTimer();
+        } else if (shouldReset) {
+            resetTimer();
+        }
     }
 
     // Apply commands if provided

@@ -6,7 +6,7 @@ body, html {
     width: 1920px;
     height: 1080px;
     overflow: hidden;
-    font-family: 'Minecraft', 'Minecraftia', '04b03', monospace;
+    font-family: 'Minecraft';
     /* Subtle, grounded black outline */
     text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
     color: white;
